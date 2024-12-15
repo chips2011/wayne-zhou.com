@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wayne Y. Zhou | Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            color: #333;
+            background: #f4f4f9;
         }
         header {
-            background: #333;
+            background: linear-gradient(135deg, #333, #555);
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         header h1 {
             margin: 0;
             font-size: 2.5rem;
+            font-weight: 600;
         }
         header p {
             margin: 0.5rem 0 0;
@@ -38,19 +43,33 @@
             padding: 0;
         }
         nav ul li {
-            margin: 0 1rem;
+            margin: 0 1.5rem;
         }
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #66c2ff;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         section {
             margin-bottom: 2rem;
+        }
+        section h2 {
+            border-bottom: 2px solid #66c2ff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #444;
         }
         footer {
             text-align: center;
@@ -60,6 +79,17 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+        }
+        footer p {
+            margin: 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -108,4 +138,3 @@
     </footer>
 </body>
 </html>
-git add .
