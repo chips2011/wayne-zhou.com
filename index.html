@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wayne Y. Zhou | Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Noto Sans', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -15,23 +15,24 @@
             background: #f4f4f9;
         }
         header {
-            background: linear-gradient(135deg, #333, #555);
+            background: linear-gradient(135deg, #004080, #336699);
             color: #fff;
-            padding: 1rem 0;
+            padding: 2rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            font-weight: 600;
+            font-size: 3rem;
+            font-family: 'ZCOOL XiaoWei', serif;
         }
         header p {
             margin: 0.5rem 0 0;
             font-size: 1.2rem;
+            font-weight: 400;
         }
         nav {
-            background: #444;
+            background: #00509e;
             color: #fff;
             padding: 0.5rem 0;
         }
@@ -52,7 +53,23 @@
             transition: color 0.3s ease;
         }
         nav ul li a:hover {
-            color: #66c2ff;
+            color: #ffcc00;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?new-zealand,china') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: 'ZCOOL XiaoWei', serif;
         }
         .container {
             max-width: 1000px;
@@ -62,30 +79,24 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        section {
-            margin-bottom: 2rem;
-        }
         section h2 {
-            border-bottom: 2px solid #66c2ff;
+            border-bottom: 2px solid #ffcc00;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
-            color: #444;
+            font-family: 'ZCOOL XiaoWei', serif;
+            color: #00509e;
         }
         footer {
             text-align: center;
             padding: 1rem 0;
-            background: #333;
+            background: #004080;
             color: #fff;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
-        }
-        footer p {
-            margin: 0;
         }
         a {
-            color: #007bff;
+            color: #00509e;
             text-decoration: none;
         }
         a:hover {
@@ -98,6 +109,9 @@
         <h1>Wayne Y. Zhou</h1>
         <p>Entrepreneur | Builder | Marketplace Enthusiast</p>
     </header>
+    <div class="hero">
+        <h2>Where East Meets West | My Journey</h2>
+    </div>
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -109,7 +123,7 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Hi, I’m Wayne Y. Zhou. I’ve built and led ventures across edtech, fintech, and marketplaces. From starting a career consulting business to selling a virtual internship product, I’ve always been drawn to exploring impactful ideas with traction.</p>
+            <p>Born in New Zealand to Chinese parents, I bring a unique perspective to everything I do. My roots in both cultures have shaped my entrepreneurial journey, bridging innovation and tradition.</p>
         </section>
         <section id="experience">
             <h2>Experience</h2>
@@ -122,7 +136,7 @@
         <section id="projects">
             <h2>Projects</h2>
             <ul>
-                <li><strong>Paraform</strong>: A recruiting marketplace helping connect recruiters with companies and candidates.</li>
+                <li><strong>Paraform</strong>: A recruiting marketplace connecting recruiters with companies and candidates.</li>
                 <li><strong>Virtual Internship</strong>: An edtech product acquired by Crimson Education.</li>
                 <li><strong>Career Consulting Business</strong>: Assisted friends in landing roles in consulting, tech, and investment banking.</li>
             </ul>
@@ -134,7 +148,7 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Wayne Y. Zhou. All rights reserved.</p>
+        <p>&copy; 2024 Wayne Y. Zhou. Where East Meets West.</p>
     </footer>
 </body>
 </html>
