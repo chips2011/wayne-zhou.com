@@ -32,22 +32,45 @@
             cursor: pointer;
         }
         .ribbon {
-            background: #D9E1F2;
+            background: #E9F0FA;
             border-bottom: 1px solid #C5C5C5;
             padding: 0.5rem 1rem;
-            box-shadow: inset 0 -1px 0 #C5C5C5;
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
             align-items: center;
+            justify-content: flex-start;
         }
-        .ribbon img {
+        .ribbon-section {
+            display: flex;
+            align-items: center;
+            margin-right: 1.5rem;
+            padding: 0.3rem 0.5rem;
+        }
+        .ribbon-section div {
+            margin-right: 0.5rem;
+            font-size: 0.85rem;
+        }
+        .ribbon-section img {
             height: 20px;
             margin-right: 0.5rem;
         }
-        .ribbon-group {
-            display: flex;
-            align-items: center;
-            margin-right: 1rem;
+        .ribbon-section select, .ribbon-section input {
+            font-size: 0.85rem;
+            padding: 0.1rem;
+            margin-right: 0.5rem;
+            border: 1px solid #AAA;
+            border-radius: 3px;
+        }
+        .ribbon-section button {
+            border: none;
+            background: #F3F3F3;
+            padding: 0.3rem;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background 0.2s;
+        }
+        .ribbon-section button:hover {
+            background: #D9E1F2;
         }
         .document {
             background: #FFF;
@@ -79,7 +102,7 @@
 <body>
     <!-- Menu Bar -->
     <div class="menu-bar">
-        <div>Home</div>
+        <div><strong>Home</strong></div>
         <div>Insert</div>
         <div>Draw</div>
         <div>Design</div>
@@ -92,21 +115,32 @@
 
     <!-- Ribbon -->
     <div class="ribbon">
-        <div class="ribbon-group">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Microsoft_Office_Word_2007.png" alt="Paste Icon">
+        <div class="ribbon-section">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Microsoft_Office_Word_2007.png" alt="Paste">
             <div>Paste</div>
         </div>
-        <div class="ribbon-group">
-            <div>Font: Calibri (Body)</div>
+        <div class="ribbon-section">
+            <select>
+                <option>Calibri (Body)</option>
+                <option>Arial</option>
+                <option>Times New Roman</option>
+            </select>
+            <input type="number" value="12" style="width: 50px;">
         </div>
-        <div class="ribbon-group">
-            <div>12</div>
+        <div class="ribbon-section">
+            <button><b>B</b></button>
+            <button><i>I</i></button>
+            <button><u>U</u></button>
+            <button><s>Aa</s></button>
         </div>
-        <div class="ribbon-group">
-            <div>B I U</div>
+        <div class="ribbon-section">
+            <button><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Align-left.png" alt="Align"></button>
+            <button><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Align-center.png" alt="Center"></button>
+            <button><img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Align-right.png" alt="Right"></button>
         </div>
-        <div class="ribbon-group">
-            <div>Styles</div>
+        <div class="ribbon-section">
+            <button>Styles</button>
+            <button>Editing</button>
         </div>
     </div>
 
