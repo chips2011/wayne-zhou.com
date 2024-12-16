@@ -36,16 +36,21 @@
             font-weight: normal;
         }
         .top-bar img {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
         }
         .top-bar .right-section button {
-            background: none;
+            background: #1A73E8;
             border: none;
-            color: #5F6368;
-            margin-left: 1rem;
+            color: #FFF;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
             cursor: pointer;
             font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .top-bar .right-section button:hover {
+            background: #135ABC;
         }
         /* Toolbar */
         .toolbar {
@@ -57,7 +62,7 @@
             flex-wrap: wrap;
         }
         .toolbar select, .toolbar input {
-            margin-right: 1rem;
+            margin-right: 0.5rem;
             font-size: 0.9rem;
             padding: 0.3rem;
             border: 1px solid #CCC;
@@ -68,12 +73,29 @@
             background: none;
             border: none;
             color: #5F6368;
-            margin-right: 1rem;
+            margin-right: 0.5rem;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
         .toolbar button:hover {
             color: #202124;
+        }
+        .ruler {
+            background: #FFFFFF;
+            border-bottom: 1px solid #DDD;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .ruler::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #E0E0E0;
         }
         /* Document */
         .document-container {
@@ -85,12 +107,14 @@
         }
         .document {
             background: #FFFFFF;
-            width: 80%;
-            max-width: 800px;
-            min-height: 1000px;
+            width: 70%;
+            max-width: 900px;
+            min-height: 1200px;
             padding: 2rem;
             border: 1px solid #E0E0E0;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            outline: none;
+            line-height: 1.5;
         }
         /* Footer */
         .footer {
@@ -113,7 +137,6 @@
         </div>
         <div class="right-section">
             <button>Share</button>
-            <button>Comments</button>
         </div>
     </div>
 
@@ -135,10 +158,15 @@
         <button>I</button>
         <button>U</button>
         <button>A</button>
-        <button>Link</button>
-        <button>Align Left</button>
-        <button>Align Center</button>
-        <button>Align Right</button>
+        <button>&#128279;</button> <!-- Link -->
+        <button>&#9776;</button> <!-- Align Left -->
+        <button>&#x2194;</button> <!-- Align Center -->
+        <button>&#9776;</button> <!-- Align Right -->
+    </div>
+
+    <!-- Ruler -->
+    <div class="ruler">
+        <div></div>
     </div>
 
     <!-- Document -->
