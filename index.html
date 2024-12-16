@@ -1,185 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Docs | Personal Website</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: #F1F3F4;
-            color: #202124;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        /* Top Bar */
-        .top-bar {
-            background: #FFFFFF;
-            border-bottom: 1px solid #DDD;
-            padding: 0.5rem 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-        .top-bar .left-section {
-            display: flex;
-            align-items: center;
-        }
-        .top-bar .left-section h1 {
-            margin: 0 0.5rem;
-            font-size: 1.2rem;
-            color: #5F6368;
-            font-weight: normal;
-        }
-        .top-bar img {
-            width: 32px;
-            height: 32px;
-        }
-        .top-bar .right-section button {
-            background: #1A73E8;
-            border: none;
-            color: #FFF;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-        .top-bar .right-section button:hover {
-            background: #135ABC;
-        }
-        /* Toolbar */
-        .toolbar {
-            background: #FFFFFF;
-            border-bottom: 1px solid #DDD;
-            padding: 0.5rem 1rem;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .toolbar select, .toolbar input {
-            margin-right: 0.5rem;
-            font-size: 0.9rem;
-            padding: 0.3rem;
-            border: 1px solid #CCC;
-            border-radius: 3px;
-            background: #FFF;
-        }
-        .toolbar button {
-            background: none;
-            border: none;
-            color: #5F6368;
-            margin-right: 0.5rem;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        .toolbar button:hover {
-            color: #202124;
-        }
-        .ruler {
-            background: #FFFFFF;
-            border-bottom: 1px solid #DDD;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .ruler::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: #E0E0E0;
-        }
-        /* Document */
-        .document-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            background: #F1F3F4;
-            padding: 1rem;
-        }
-        .document {
-            background: #FFFFFF;
-            width: 70%;
-            max-width: 900px;
-            min-height: 1200px;
-            padding: 2rem;
-            border: 1px solid #E0E0E0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            outline: none;
-            line-height: 1.5;
-        }
-        /* Footer */
-        .footer {
-            background: #FFFFFF;
-            border-top: 1px solid #DDD;
-            padding: 0.5rem 1rem;
-            font-size: 0.8rem;
-            color: #5F6368;
-            display: flex;
-            justify-content: space-between;
-        }
-    </style>
-</head>
-<body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="left-section">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Google_Docs_2020_Logo.png" alt="Google Docs Logo">
-            <h1>Untitled document</h1>
-        </div>
-        <div class="right-section">
-            <button>Share</button>
-        </div>
-    </div>
+import React from "react";
+import "./App.css";
 
-    <!-- Toolbar -->
-    <div class="toolbar">
-        <select>
-            <option>Normal text</option>
-            <option>Title</option>
-            <option>Heading 1</option>
-            <option>Heading 2</option>
-        </select>
-        <select>
-            <option>Arial</option>
-            <option>Calibri</option>
-            <option>Times New Roman</option>
-        </select>
-        <input type="number" value="11" style="width: 50px;">
-        <button>B</button>
-        <button>I</button>
-        <button>U</button>
-        <button>A</button>
-        <button>&#128279;</button> <!-- Link -->
-        <button>&#9776;</button> <!-- Align Left -->
-        <button>&#x2194;</button> <!-- Align Center -->
-        <button>&#9776;</button> <!-- Align Right -->
+function TopBar() {
+  return (
+    <div className="top-bar">
+      <div className="left-section">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/36/Google_Docs_2020_Logo.png"
+          alt="Google Docs Logo"
+        />
+        <h1>Untitled document</h1>
+      </div>
+      <div className="right-section">
+        <button>Share</button>
+      </div>
     </div>
+  );
+}
 
-    <!-- Ruler -->
-    <div class="ruler">
-        <div></div>
+function Toolbar() {
+  return (
+    <div className="toolbar">
+      <select>
+        <option>Normal text</option>
+        <option>Title</option>
+        <option>Heading 1</option>
+        <option>Heading 2</option>
+      </select>
+      <select>
+        <option>Arial</option>
+        <option>Calibri</option>
+        <option>Times New Roman</option>
+      </select>
+      <input type="number" value="11" style={{ width: "50px" }} />
+      <button>B</button>
+      <button>I</button>
+      <button>U</button>
+      <button>A</button>
+      <button>&#128279;</button> {/* Link */}
+      <button>&#9776;</button> {/* Align Left */}
+      <button>&#x2194;</button> {/* Align Center */}
+      <button>&#9776;</button> {/* Align Right */}
     </div>
+  );
+}
 
-    <!-- Document -->
-    <div class="document-container">
-        <div class="document" contenteditable="true">
-            <p>Click here to start typing...</p>
-        </div>
-    </div>
+function Ruler() {
+  return <div className="ruler"></div>;
+}
 
-    <!-- Footer -->
-    <div class="footer">
-        <div>Page 1</div>
-        <div>100% | Arial | 11</div>
+function Document() {
+  return (
+    <div className="document-container">
+      <div className="document" contentEditable="true">
+        <p>Click here to start typing...</p>
+      </div>
     </div>
-</body>
-</html>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="footer">
+      <div>Page 1</div>
+      <div>100% | Arial | 11</div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <TopBar />
+      <Toolbar />
+      <Ruler />
+      <Document />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
