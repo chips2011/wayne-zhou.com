@@ -3,152 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wayne Y. Zhou | Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <title>Microsoft Word 2007 | Personal Website</title>
     <style>
         body {
-            font-family: 'Noto Sans', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background: #f4f4f9;
+            font-family: Arial, sans-serif;
+            background: #4A73B2;
+            color: #000;
         }
-        header {
-            background: linear-gradient(135deg, #004080, #336699);
-            color: #fff;
-            padding: 2rem 1rem;
-            text-align: center;
-            position: relative;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-            font-family: 'ZCOOL XiaoWei', serif;
-        }
-        header p {
-            margin: 0.5rem 0 0;
-            font-size: 1.2rem;
-            font-weight: 400;
-        }
-        nav {
-            background: #00509e;
-            color: #fff;
-            padding: 0.5rem 0;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 0 1.5rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
-        .hero {
-            background: url('https://source.unsplash.com/1600x900/?new-zealand,china') no-repeat center center/cover;
-            height: 400px;
+        .toolbar {
+            background: #E4EAF2;
+            border-bottom: 2px solid #C5C5C5;
+            padding: 0.5rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-        .hero h2 {
-            font-size: 2.5rem;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-family: 'ZCOOL XiaoWei', serif;
+        .toolbar img {
+            height: 24px;
+            margin-right: 1rem;
         }
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
+        .toolbar div {
+            margin-right: 2rem;
+            font-size: 0.9rem;
+            color: #333;
+        }
+        .document-area {
+            background: #FFF;
+            width: 90%;
+            max-width: 900px;
+            margin: 3rem auto;
             padding: 2rem;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 1px solid #CCC;
+            outline: 1px solid #FFF;
         }
-        section h2 {
-            border-bottom: 2px solid #ffcc00;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-            font-family: 'ZCOOL XiaoWei', serif;
-            color: #00509e;
+        .document-area:focus {
+            outline: 1px solid #4A73B2;
         }
         footer {
             text-align: center;
+            background: #E4EAF2;
             padding: 1rem 0;
-            background: #004080;
-            color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-            color: #00509e;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            color: #555;
+            border-top: 1px solid #C5C5C5;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Wayne Y. Zhou</h1>
-        <p>Entrepreneur | Builder | Marketplace Enthusiast</p>
-    </header>
-    <div class="hero">
-        <h2>Where East Meets West | My Journey</h2>
+    <div class="toolbar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Microsoft_Office_Word_2007.png" alt="Word 2007 Logo">
+        <div>File</div>
+        <div>Edit</div>
+        <div>View</div>
+        <div>Insert</div>
+        <div>Format</div>
+        <div>Tools</div>
+        <div>Table</div>
+        <div>Help</div>
     </div>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Born in New Zealand to Chinese parents, I bring a unique perspective to everything I do. My roots in both cultures have shaped my entrepreneurial journey, bridging innovation and tradition.</p>
-        </section>
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Founder & CEO</strong> - Paraform (2024 - Present)</li>
-                <li><strong>CEO of New Ventures</strong> - Crimson Education</li>
-                <li><strong>Fintech Startup</strong> - Y Combinator Alumnus</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Paraform</strong>: A recruiting marketplace connecting recruiters with companies and candidates.</li>
-                <li><strong>Virtual Internship</strong>: An edtech product acquired by Crimson Education.</li>
-                <li><strong>Career Consulting Business</strong>: Assisted friends in landing roles in consulting, tech, and investment banking.</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:wayne@example.com">wayne@example.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/wayneyzhou" target="_blank">linkedin.com/in/wayneyzhou</a></p>
-        </section>
+    <div class="document-area" contenteditable="true">
+        <!-- Add your content here -->
     </div>
     <footer>
-        <p>&copy; 2024 Wayne Y. Zhou. Where East Meets West.</p>
+        &copy; 2024 Personal Website - Styled like Microsoft Word 2007.
     </footer>
 </body>
 </html>
