@@ -3,159 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microsoft Word 2007 | Personal Website</title>
+    <title>Google Docs | Personal Website</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: #F3F3F3;
-            color: #000;
-        }
-        .menu-bar {
-            background: #EDEDED;
-            border-bottom: 1px solid #C5C5C5;
+            background: #F1F3F4;
+            color: #202124;
+            height: 100vh;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+        }
+        /* Top Bar */
+        .top-bar {
+            background: #FFFFFF;
+            border-bottom: 1px solid #DDD;
             padding: 0.5rem 1rem;
-            box-shadow: inset 0 -1px 0 #C5C5C5;
-        }
-        .menu-bar div {
-            margin-right: 1.5rem;
-            font-size: 0.9rem;
-            color: #000;
-            font-weight: bold;
-        }
-        .menu-bar div:hover {
-            background: #D9E1F2;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .ribbon {
-            background: #E9F0FA;
-            border-bottom: 1px solid #C5C5C5;
-            padding: 0.5rem 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: flex-start;
-        }
-        .ribbon-section {
-            display: flex;
-            align-items: center;
-            margin-right: 1.5rem;
-            padding: 0.3rem 0.5rem;
-        }
-        .ribbon-section div {
-            margin-right: 0.5rem;
-            font-size: 0.85rem;
-        }
-        .ribbon-section img {
-            height: 20px;
-            margin-right: 0.5rem;
-        }
-        .ribbon-section select, .ribbon-section input {
-            font-size: 0.85rem;
-            padding: 0.1rem;
-            margin-right: 0.5rem;
-            border: 1px solid #AAA;
-            border-radius: 3px;
-        }
-        .ribbon-section button {
-            border: none;
-            background: #F3F3F3;
-            padding: 0.3rem;
-            cursor: pointer;
-            border-radius: 3px;
-            transition: background 0.2s;
-        }
-        .ribbon-section button:hover {
-            background: #D9E1F2;
-        }
-        .document {
-            background: #FFF;
-            width: 95%;
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 3rem;
-            min-height: 700px;
-            border: 1px solid #D3D3D3;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        .footer-bar {
-            background: #EDEDED;
-            border-top: 1px solid #C5C5C5;
-            padding: 0.5rem;
-            font-size: 0.8rem;
-            color: #555;
             display: flex;
             justify-content: space-between;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        .footer-bar div {
+        .top-bar .left-section {
+            display: flex;
+            align-items: center;
+        }
+        .top-bar .left-section h1 {
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            color: #5F6368;
+            font-weight: normal;
+        }
+        .top-bar img {
+            width: 24px;
+            height: 24px;
+        }
+        .top-bar .right-section button {
+            background: none;
+            border: none;
+            color: #5F6368;
+            margin-left: 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        /* Toolbar */
+        .toolbar {
+            background: #FFFFFF;
+            border-bottom: 1px solid #DDD;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .toolbar select, .toolbar input {
             margin-right: 1rem;
+            font-size: 0.9rem;
+            padding: 0.3rem;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+            background: #FFF;
+        }
+        .toolbar button {
+            background: none;
+            border: none;
+            color: #5F6368;
+            margin-right: 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .toolbar button:hover {
+            color: #202124;
+        }
+        /* Document */
+        .document-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            background: #F1F3F4;
+            padding: 1rem;
+        }
+        .document {
+            background: #FFFFFF;
+            width: 80%;
+            max-width: 800px;
+            min-height: 1000px;
+            padding: 2rem;
+            border: 1px solid #E0E0E0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        /* Footer */
+        .footer {
+            background: #FFFFFF;
+            border-top: 1px solid #DDD;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            color: #5F6368;
+            display: flex;
+            justify-content: space-between;
         }
     </style>
 </head>
 <body>
-    <!-- Menu Bar -->
-    <div class="menu-bar">
-        <div><strong>Home</strong></div>
-        <div>Insert</div>
-        <div>Draw</div>
-        <div>Design</div>
-        <div>Layout</div>
-        <div>References</div>
-        <div>Mailings</div>
-        <div>Review</div>
-        <div>View</div>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="left-section">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Google_Docs_2020_Logo.png" alt="Google Docs Logo">
+            <h1>Untitled document</h1>
+        </div>
+        <div class="right-section">
+            <button>Share</button>
+            <button>Comments</button>
+        </div>
     </div>
 
-    <!-- Ribbon -->
-    <div class="ribbon">
-        <div class="ribbon-section">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Microsoft_Office_Word_2007.png" alt="Paste">
-            <div>Paste</div>
-        </div>
-        <div class="ribbon-section">
-            <select>
-                <option>Calibri (Body)</option>
-                <option>Arial</option>
-                <option>Times New Roman</option>
-            </select>
-            <input type="number" value="12" style="width: 50px;">
-        </div>
-        <div class="ribbon-section">
-            <button><b>B</b></button>
-            <button><i>I</i></button>
-            <button><u>U</u></button>
-            <button><s>Aa</s></button>
-        </div>
-        <div class="ribbon-section">
-            <button><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Align-left.png" alt="Align"></button>
-            <button><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Align-center.png" alt="Center"></button>
-            <button><img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Align-right.png" alt="Right"></button>
-        </div>
-        <div class="ribbon-section">
-            <button>Styles</button>
-            <button>Editing</button>
-        </div>
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <select>
+            <option>Normal text</option>
+            <option>Title</option>
+            <option>Heading 1</option>
+            <option>Heading 2</option>
+        </select>
+        <select>
+            <option>Arial</option>
+            <option>Calibri</option>
+            <option>Times New Roman</option>
+        </select>
+        <input type="number" value="11" style="width: 50px;">
+        <button>B</button>
+        <button>I</button>
+        <button>U</button>
+        <button>A</button>
+        <button>Link</button>
+        <button>Align Left</button>
+        <button>Align Center</button>
+        <button>Align Right</button>
     </div>
 
     <!-- Document -->
-    <div class="document" contenteditable="true">
-        <p style="margin: 0; color: #777;">Click here to start typing...</p>
+    <div class="document-container">
+        <div class="document" contenteditable="true">
+            <p>Click here to start typing...</p>
+        </div>
     </div>
 
     <!-- Footer -->
-    <div class="footer-bar">
-        <div>Page 1 of 1</div>
-        <div>0 words</div>
-        <div>English (United States)</div>
-        <div>Focus</div>
-        <div>138%</div>
+    <div class="footer">
+        <div>Page 1</div>
+        <div>100% | Arial | 11</div>
     </div>
 </body>
 </html>
