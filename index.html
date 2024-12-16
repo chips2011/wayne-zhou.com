@@ -9,66 +9,119 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: #4A73B2;
+            background: #F3F3F3;
             color: #000;
         }
-        .toolbar {
-            background: #E4EAF2;
-            border-bottom: 2px solid #C5C5C5;
-            padding: 0.5rem;
+        .menu-bar {
+            background: #EDEDED;
+            border-bottom: 1px solid #C5C5C5;
             display: flex;
             align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 0.5rem 1rem;
+            box-shadow: inset 0 -1px 0 #C5C5C5;
         }
-        .toolbar img {
-            height: 24px;
+        .menu-bar div {
+            margin-right: 1.5rem;
+            font-size: 0.9rem;
+            color: #000;
+            font-weight: bold;
+        }
+        .menu-bar div:hover {
+            background: #D9E1F2;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .ribbon {
+            background: #D9E1F2;
+            border-bottom: 1px solid #C5C5C5;
+            padding: 0.5rem 1rem;
+            box-shadow: inset 0 -1px 0 #C5C5C5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ribbon img {
+            height: 20px;
+            margin-right: 0.5rem;
+        }
+        .ribbon-group {
+            display: flex;
+            align-items: center;
             margin-right: 1rem;
         }
-        .toolbar div {
-            margin-right: 2rem;
-            font-size: 0.9rem;
-            color: #333;
-        }
-        .document-area {
+        .document {
             background: #FFF;
-            width: 90%;
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 2rem;
-            min-height: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            border: 1px solid #CCC;
-            outline: 1px solid #FFF;
+            width: 95%;
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 3rem;
+            min-height: 700px;
+            border: 1px solid #D3D3D3;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-        .document-area:focus {
-            outline: 1px solid #4A73B2;
-        }
-        footer {
-            text-align: center;
-            background: #E4EAF2;
-            padding: 1rem 0;
-            color: #555;
+        .footer-bar {
+            background: #EDEDED;
             border-top: 1px solid #C5C5C5;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-bar div {
+            margin-right: 1rem;
         }
     </style>
 </head>
 <body>
-    <div class="toolbar">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Microsoft_Office_Word_2007.png" alt="Word 2007 Logo">
-        <div>File</div>
-        <div>Edit</div>
-        <div>View</div>
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <div>Home</div>
         <div>Insert</div>
-        <div>Format</div>
-        <div>Tools</div>
-        <div>Table</div>
-        <div>Help</div>
+        <div>Draw</div>
+        <div>Design</div>
+        <div>Layout</div>
+        <div>References</div>
+        <div>Mailings</div>
+        <div>Review</div>
+        <div>View</div>
     </div>
-    <div class="document-area" contenteditable="true">
-        <!-- Add your content here -->
+
+    <!-- Ribbon -->
+    <div class="ribbon">
+        <div class="ribbon-group">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Microsoft_Office_Word_2007.png" alt="Paste Icon">
+            <div>Paste</div>
+        </div>
+        <div class="ribbon-group">
+            <div>Font: Calibri (Body)</div>
+        </div>
+        <div class="ribbon-group">
+            <div>12</div>
+        </div>
+        <div class="ribbon-group">
+            <div>B I U</div>
+        </div>
+        <div class="ribbon-group">
+            <div>Styles</div>
+        </div>
     </div>
-    <footer>
-        &copy; 2024 Personal Website - Styled like Microsoft Word 2007.
-    </footer>
+
+    <!-- Document -->
+    <div class="document" contenteditable="true">
+        <p style="margin: 0; color: #777;">Click here to start typing...</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+        <div>Page 1 of 1</div>
+        <div>0 words</div>
+        <div>English (United States)</div>
+        <div>Focus</div>
+        <div>138%</div>
+    </div>
 </body>
 </html>
